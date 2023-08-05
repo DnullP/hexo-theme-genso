@@ -1,0 +1,22 @@
+{
+  "name": "hexo-genso-renderer",
+  "version": "0.0.1",
+  "description": "This is a plugin for theme Genso.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DnullP/hexo-theme-genso-plugin.git"
+  },
+  "author": "Dnull_P",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DnullP/hexo-theme-genso-plugin/issues"
+  },
+  "homepage": "https://github.com/DnullP/hexo-theme-genso-plugin#readme",
+  "dependencies": {
+    "katex": "^0.16.8"
+  }
+}

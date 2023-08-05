@@ -1,0 +1,9 @@
+{
+  "name": "Genso",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "hexo-GensoTheme": "^0.0.1"
+  }
+}

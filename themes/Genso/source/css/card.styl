@@ -1,0 +1,72 @@
+
+.card-container {
+    width: 200px;
+    height: 142px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(63, 77, 123, 0.52);
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 731px;
+    height: 262px;
+    display: flex;
+    flex-flow: left wrap;
+    flex-shrink: 0;
+    border-radius: 45px;
+    background: #FFF;
+    box-shadow: 0px 2px 13px 6px rgba(75, 91, 146, 0.25);
+    transition: all 0.15s ease;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 8px 0px rgba(63, 77, 123, 0.52); // 增加阴影
+    transform: scale(1.05); // 增加大小
+}
+
+.card-meta {
+    width: auto;
+    height: 25px;
+    flex-shrink: 0;
+    color: #5553A7;
+    font-family: Londrina Solid;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 250;
+    line-height: normal;
+}
+
+.card-img {
+    flex: 0.8;
+    width: 340px;
+    height: 262px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.card-title {
+    width: auto;
+    height: 35px;
+    position: relative; // 或者其他你需要的位置属性值
+    text-decoration: none; // 去掉超链接下的横线
+    color: #7F6E96;
+    font-family: Londrina Solid;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.card-abstract {
+}
+
+.card-content-box {
+    width: 392px;
+    height: 241px;
+    flex-shrink: 0;
+}
