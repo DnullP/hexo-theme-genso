@@ -1,0 +1,60 @@
+<% if (page.posts.length > 0) { %>
+
+<div class="card-container">
+  <div class="title-card-container">
+    <div class="title-card">
+
+    </div>
+    <div class="title-card">
+
+    </div>
+  </div>
+
+  <div class="article-list-title">
+    <div class="article-list-title-text">
+      文章列表
+    </div>
+    <div class="two-lines">
+      <div class="article-list-title-line-1"></div>
+      <div class="article-list-title-line-2"></div>
+    </div>
+  </div>
+
+  <% page.posts.sort('date', -1).limit(10).each(function(post, index) { %>
+  <% 
+        var urls = config.imgURLs;
+        var randomIndex = Math.floor(Math.random() * urls.length);
+        var randomUrl = urls[randomIndex];
+        var patternId = 'imagePattern' + index; 
+      %>
+  <div class="card">
+
+    <div class="card-img">
+      <svg width="340" height="262" viewBox="0 0 340 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="<%= patternId %>" patternUnits="userSpaceOnUse" width="340" height="262">
+            <image xlink:href="<%= randomUrl %>" x="-30" y="-30" width="380" height="300" />
+          </pattern>
+        </defs>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M339.294 0H45C20.1472 0 0 20.1472 0 45V217C0 241.853 20.1472 262 45 262H281.354L339.294 0Z" fill="url(#<%= patternId %>)" />
+      </svg>
+    </div>
+
+    <div class="card-content-box">
+      <a class="card-title" href="<%= url_for(post.path) %>">
+        <%= post.title %>
+      </a>
+      <span class="card-abstract">
+        <%= post.data %>
+      </span>
+      <div class="card-meta">
+        <time datetime="<%= post.date.toJSON() %>" class="">
+          <%= date(post.date) %>
+        </time>
+      </div>
+    </div>
+  </div>
+
+  <% }); %>
+</div>
+<% } %>

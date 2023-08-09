@@ -1,0 +1,25 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/Genso.css
+- /css/card.css
+- /css/main-layout.css
+- /css/left-container.css
+- /css/right-container.css
+- /css/navigator.css
+- /css/title-card.css
+- /css/page.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/Genso.js
