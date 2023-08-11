@@ -1,0 +1,38 @@
+.card {
+
+    width: 731px;
+    height: 262px;
+    display: flex;
+    flex-flow: left wrap;
+    flex-shrink: 0;
+    border-radius: 45px;
+    background: #FFF;
+    box-shadow: 0px 2px 13px 6px rgba(75, 91, 146, 0.25);
+    transition: all 0.15s ease;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 8px 0px rgba(63, 77, 123, 0.52); // 增加阴影
+    transform: scale(1.05); // 增加大小
+}
+
+.card-list-title {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-list-title-text {
+    width: 102px;
+    height: 30px;
+    color: #754699;
+    font-family: Londrina Solid;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 250;
+    line-height: normal;
+}
