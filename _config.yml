@@ -1,4 +1,3 @@
-
 # html lang
 language: en
 
@@ -7,28 +6,32 @@ menu:
   Home: /
   About: /about
   Contact: /contact
-  Archives: /archives
-  Tags: /tags
+  post:
+    Aarchives: /archives
+    Tags: /tags
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/Genso.css
-- /css/layout/layout.css
-- /css/layout/navigator.css
-- /css/layout/page-container.css
-- /css/layout/page-cover.css
-- /css/layout/slidebar.css
-- /css/layout/panel.css
-
-- /css/right-container.css
-- /css/title-card.css
-- /css/page.css
-- /css/card.css
+  #global css
+  - /css/Genso.css
+  #layout css
+  - /css/layout/layout.css
+  - /css/layout/navigator.css
+  - /css/layout/page-container.css
+  - /css/layout/page-cover.css
+  - /css/layout/slidebar.css
+  - /css/layout/panel.css
+  #index css
+  - /css/index/index.css
+  - /css/index/recommend-card-container.css
+  - /css/index/card-container.css
+  - /css/index/card.css
+  
 # scripts loaded in the end of the body
 scripts:
-- /js/Genso.js
-- /js/layout/page-cover.js
-- /js/layout/slidebar.js
+  - /js/Genso.js
+  - /js/layout/page-cover.js
+  - /js/layout/slidebar.js
 
 fonts:
-- /font/jf-openhuninn-2.0.ttf
+  - /font/jf-openhuninn-2.0.ttf

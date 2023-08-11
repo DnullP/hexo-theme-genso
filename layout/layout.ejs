@@ -27,13 +27,29 @@ pageTitle += ' [ ' + config.title + ' ]';
   <div class="navigator">
     <div class="navi-buttom-container">
       <% Object.keys(theme.menu).forEach(key => { %>
-      <a href="<%=theme.menu[key]%>">
-        <div class="navi-buttom">
+      <% if (theme.menu[key] instanceof Object) { %>
+      <div class="navi-dropdown">
+        <div class="dropbtn">
           <%=key%>
         </div>
-      </a>
-      <% }); %>
+        <div class="dropdown-content">
+          <% Object.keys(theme.menu[key]).forEach(element => { %>
+          <a href="<%=theme.menu[key][element]%>">
+            <%=element%>
+          </a>
+          <% }); %>
+        </div>
+      </div>
     </div>
+    <% } else { %>
+    <a href="<%=theme.menu[key]%>" class="navi-buttom">
+      <div>
+        <%=key%>
+      </div>
+    </a>
+    <% } %>
+    <% }); %>
+  </div>
   </div>
 
   <div class="page-cover">

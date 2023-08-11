@@ -18,46 +18,87 @@
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-.dropdown {
+/* 定义下拉菜单的容器 */
+.navi-dropdown {
   position: relative;
   display: inline-block;
 }
 
+/* 定义按钮样式 */
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+  width: min-content;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.39);
+  color: #5e4959;
+  font-family: jf-openhuninn;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
+/* 定义下拉菜单的内容 */
 .dropdown-content {
-  display: none;
+  display: block;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: min-content;
+  height: min-content;
   z-index: 1;
+  visibility: hidden;
+  transition: 0.5s;
 }
 
+.navi-dropdown:hover .dropdown-content {
+  visibility: visible;
+}
+
+/* 定义下拉菜单中的链接样式 */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  position: relative;
+  color: #5e4959;
+  font-family: jf-openhuninn;
+  background: rgba(217, 217, 217, 0.39);
+  font-size: 28px;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  transform: translateY(-10px);
+  transition: transform 0.5s ease-in-out 0s, background-color 0.2s ease-in-out 0s,opacity 0.5s ease-in-out 0s;
+  opacity: 0;
   text-decoration: none;
   display: block;
 }
 
+.navi-dropdown:hover .dropdown-content a:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.navi-dropdown:hover .dropdown-content a:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.navi-dropdown:hover .dropdown-content a:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+
+.navi-dropdown:hover .dropdown-content a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background: rgba(192, 236, 255, 0.415);
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+.dropbtn:hover {
+  background: rgba(192, 236, 255, 0.415);
 }
