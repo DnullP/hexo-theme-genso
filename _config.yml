@@ -32,6 +32,10 @@ scripts:
   - /js/Genso.js
   - /js/layout/page-cover.js
   - /js/layout/slidebar.js
+  - /js/target_test.js
 
 fonts:
   - /font/jf-openhuninn-2.0.ttf
+
+color:
+  card-title : '#000000'
