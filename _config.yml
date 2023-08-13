@@ -26,16 +26,22 @@ stylesheets:
   - /css/index/recommend-card-container.css
   - /css/index/card-container.css
   - /css/index/card.css
-  
+
+#raw source
+rawSource: _source
 # scripts loaded in the end of the body
 scripts:
   - /js/Genso.js
   - /js/layout/page-cover.js
-  - /js/layout/slidebar.js
-  - /js/target_test.js
+  - /js/layout/animation.js
+  - /js/test.js
+# config which js file will be loaded in a particular page
+layout_scripts:
+  - /js/layout/page-cover.js
+  - /js/layout/animation.js
 
 fonts:
   - /font/jf-openhuninn-2.0.ttf
 
 color:
-  card-title : '#000000'
+  card-title: "#000000"
