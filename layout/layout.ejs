@@ -43,13 +43,6 @@ pageTitle += ' [ ' + config.title + ' ]';
 </head>
 
 <body>
-  <div id="wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
-      <path class="wave-path" d="M0,50 Q500,100 1000,50 T2000,50"></path>
-    </svg>
-  </div>
-  <script src="js/target_test.js"></script>
-
   <div class="navigator">
     <div class="navi-buttom-container">
       <% Object.keys(theme.menu).forEach(key => { %>
@@ -87,7 +80,7 @@ pageTitle += ' [ ' + config.title + ' ]';
       <img src="<%= randomUrl %>" alt="">
     </div>
 
-    <div class="title-text">
+    <div class="title-text animate__animated animate__bounce">
       <h1>This is
         <span class="name">
           <%=config.author%>
@@ -159,7 +152,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 
   <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
   <!-- scripts list from theme config.yml -->
-  <% theme.scripts.forEach(url => { %>
+  <% theme.layout_scripts.forEach(url => { %>
   <script src="<%=url%>"></script>
   <% }); %>
   <% } %>
