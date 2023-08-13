@@ -21,28 +21,35 @@ pageTitle += ' [ ' + config.title + ' ]';
   <% }); %>
   <% } %>
 
-  <!-- Vanilla JavaScript -->
-  <style>
-    #wave {
-      width: 100%;
-      height: 100px;
-      background: lightblue;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .wave-path {
-      fill: none;
-      stroke: blue;
-      stroke-width: 5px;
-    }
-  </style>
-
-
-
 </head>
 
 <body>
+  <div class="background">
+    <% var urls = config.imgURLs;
+      var randomIndex = Math.floor(Math.random() * urls.length);
+      var randomUrl = urls[randomIndex]; %>
+
+    <img src="<%= randomUrl %>" alt="">
+
+    <div class="title-text animate__animated animate__bounce">
+      <h1>This is
+        <span class="name">
+          <%=config.author%>
+        </span>
+      </h1>
+      <%=config.proverb%>
+
+    </div>
+  </div>
+  
+  <div class="background-coverage">
+    <!--Typed text-->
+      <div class="background-coverage-text">
+        <span id="background-coverage-text">
+        </span>
+      </div>
+  </div>
+
   <div class="navigator">
     <div class="navi-buttom-container">
       <% Object.keys(theme.menu).forEach(key => { %>
@@ -69,49 +76,12 @@ pageTitle += ' [ ' + config.title + ' ]';
     <% } %>
     <% }); %>
   </div>
+
+  <div class="background-occupation">
+    
   </div>
 
-  <div class="page-cover">
-    <% var urls = config.imgURLs;
-      var randomIndex = Math.floor(Math.random() * urls.length);
-      var randomUrl = urls[randomIndex]; %>
 
-    <div class="title-image">
-      <img src="<%= randomUrl %>" alt="">
-    </div>
-
-    <div class="title-text animate__animated animate__bounce">
-      <h1>This is
-        <span class="name">
-          <%=config.author%>
-        </span>
-      </h1>
-      <%=config.proverb%>
-
-    </div>
-
-
-    <div class="overlay-img" style="top : 140px" data-speed="0.3">
-      <svg width="1920" height="882" viewBox="0 0 1920 882" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 215.053H106.666V53.7633H320V193.548H533.334V247.311H746.666V172.043H960V118.279H1173.33V10.7527H1386.67V75.2687H1600V139.785H1813.33V0H1920V881.719H1813.33H1600H1386.67H1173.33H960H746.666H533.334H320H106.666H0V215.053Z" fill="white" fill-opacity="0.59" />
-      </svg>
-    </div>
-    <div class="overlay-img" style="top : 190px" data-speed="0.4">
-      <svg width="1920" height="732" viewBox="0 0 1920 732" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 65.0533H106.666V237.096H320V86.5586H533.334V65.0533H746.666V215.591H960V43.548H1173.33V204.838H1386.67V161.827H1600V65.0533H1813.33V0.537277H1920V731.719H1813.33H1600H1386.67H1173.33H960H746.666H533.334H320H106.666H0V65.0533Z" fill="white" fill-opacity="0.78" />
-      </svg>
-    </div>
-    <div class="overlay-img" style="top : 290px" data-speed="0.5">
-      <svg width="1920" height="624" viewBox="0 0 1920 624" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 182.859H106.666V129.096H320V139.849H533.334V172.107H746.666V0.0639954H960V172.107H1173.33V0.0639954H1386.67V139.849H1600V204.365H1813.33V10.8166H1920V623.719H1813.33H1600H1386.67H1173.33H960H746.666H533.334H320H106.666H0V182.859Z" fill="white" fill-opacity="0.39" />
-      </svg>
-    </div>
-    <div class="overlay-img" style="top: 55%;" data-speed="0.9">
-      <svg width="1920" height="882" viewBox="0 0 1920 882" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 215.335H106.666V54.0447H320V193.829H533.334V247.593H746.666V172.324H960V118.561H1173.33V11.0341H1386.67V75.5501H1600V140.066H1813.33V0.281403H1920V882H1813.33H1600H1386.67H1173.33H960H746.666H533.334H320H106.666H0V215.335Z" fill="white" />
-      </svg>
-    </div>
-  </div>
 
   <div class="page-container">
     <div>
@@ -142,7 +112,7 @@ pageTitle += ' [ ' + config.title + ' ]';
     </div>
 
     <div class="content">
-      <%- body %>
+
     </div>
 
   </div>

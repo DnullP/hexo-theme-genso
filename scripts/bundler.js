@@ -5,13 +5,13 @@ hexo.on("generateBefore", function (post) {
     var paths = hexo.theme.config.scripts
     var source = hexo.theme.config.rawSource
     var entry = paths.map(str => '../' + source + str);
-    var output = paths.map(str => 'public/' + str.replace(/\.js$/, '.js'));
+    var output = paths.map(str => './' + str.replace(/\.js$/, '.js'));
     var proceeding = []
     console.log(__dirname)
     entry.forEach((item, index) => {
         proceeding.push({
             entry: { path: path.resolve(__dirname, item) },
-            output: { filename: output[index], path: path.resolve('./') },
+            output: { filename: output[index], path: path.resolve('./public/') },
             module: {
                 rules: [
                     {
@@ -20,6 +20,7 @@ hexo.on("generateBefore", function (post) {
                     },
                 ],
             },
+            mode: 'production',
         })
     })
     webpack(
