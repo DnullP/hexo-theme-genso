@@ -20,7 +20,6 @@ stylesheets:
   - /css/layout/page-container.css
   - /css/layout/page-cover.css
   - /css/layout/slidebar.css
-  - /css/layout/panel.css
   #index css
   - /css/index/index.css
   - /css/index/recommend-card-container.css
