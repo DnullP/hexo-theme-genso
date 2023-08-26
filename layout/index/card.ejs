@@ -1,18 +1,17 @@
 <% if (index%2 == 1) {%>
-
-<div class="card" style="justify-content: left;">
+<div class="card" style="justify-content: right;">
 
   <%- partial("card-img-1", {randomUrl: randomUrl, patternId: patternId}) %>
 
-  <div class="card-content-box">
-    <div class="card-info">
-      <div class="card-info-content">
+  <div class="card-content">
+    <div class="card-info-warp">
+      <div class="card-info">
         <%= date(post.date) %>
       </div>
-      <div class="card-info-content">
+      <div class="card-info">
         <%-symbolsCount(post.raw)%>字
       </div>
-      <div class="card-info-content">
+      <div class="card-info">
         阅读时间: <%=symbolsTime(post.raw)%>
       </div>
     </div>
@@ -34,18 +33,18 @@
 
 <% } else { %>
 
-<div class="card" style="justify-content: right;">
+<div class="card" style="justify-content: left;">
 
-  <div class="card-content-box">
+  <div class="card-content">
 
-    <div class="card-info">
-      <div class="card-info-content">
+    <div class="card-info-warp">
+      <div class="card-info">
         <%= date(post.date) %>
       </div>
-      <div class="card-info-content">
+      <div class="card-info">
         <%-symbolsCount(post.raw)%>字
       </div>
-      <div class="card-info-content">
+      <div class="card-info">
         阅读时间: <%=symbolsTime(post.raw)%>
       </div>
     </div>
@@ -57,9 +56,9 @@
     <a class="card-title" href="<%= url_for(post.path) %>" style="transform: translateX(45px);">
       <%= post.title %>
     </a>
-    <div class="card-abstract" style="transform: translateX(45px);">
+    <span class="card-abstract" style="transform: translateX(0);">
       <%= post._content %>
-    </div>
+    </span>
 
   </div>
 
