@@ -58,18 +58,19 @@ window.addEventListener('scroll', function (e) {
 // resume it when user scrolling up
 var animation_navigator_enter = anime({
     targets: '.navigator',
-    translateY: ['-100px', '0px'],
+    translateY: ['-62px', '0px'],
     autoplay: false,
+    duration: 200,
     easing: 'easeInOutSine',
 });
 
 var animation_navigator_exit = anime({
     targets: '.navigator',
-    translateY: ['0px', '-100px'],
+    translateY: ['0px', '-62px'],
     autoplay: false,
+    duration: 200,
     easing: 'easeInOutSine',
 });
-
 
 var lastScrollY = 3;
 var naviIsHidden = false;
@@ -80,6 +81,7 @@ window.addEventListener('scroll', throttle(function (e) {
     console.log(currentScrollY, window.innerHeight);
 
     if (currentScrollY > window.innerHeight) {
+        
         if (currentScrollY > lastScrollY && !naviIsHidden) {
             animation_navigator_exit.play();
             naviIsHidden = true;
@@ -92,5 +94,64 @@ window.addEventListener('scroll', throttle(function (e) {
         animation_navigator_enter.play();
         naviIsHidden = false;
     }
+
     lastScrollY = currentScrollY;
 }, 200));
+
+// ------------------------------------------
+// show recommend-card articles when hover on
+
+const animation_slidebar_panel_enter_config = {
+    duration : 300
+}
+
+var animation_slidebar_panel_enter = anime({
+    targets: '.panel',
+    translateX: ['-277px', '0px'],
+    autoplay: false,
+    duration: animation_slidebar_panel_enter_config.duration,
+    easing: 'easeInOutSine',
+});
+
+var animation_slidebar_panel_exit = anime({
+    targets: '.panel',
+    translateX: ['0px', '-277px'],
+    autoplay: false,
+    duration: animation_slidebar_panel_enter_config.duration,
+    easing: 'easeInOutSine',
+});
+
+var animation_slidebar_expand = anime({
+    targets: '.slidebar-warp',
+    width: ['63px', '340px'],
+    autoplay: false,
+    duration: animation_slidebar_panel_enter_config.duration,
+    easing: 'easeInOutSine',
+});
+
+var animation_slidebar_shrink = anime({
+    targets: '.slidebar-warp',
+    width: ['340px', '63px'],
+    autoplay: false,
+    duration: animation_slidebar_panel_enter_config.duration,
+    easing: 'easeInOutSine',
+});
+
+var slidebarHidden = false;
+
+//find all .hide-slidebar-button and add the onclick event to activate the animation
+var hide_slidebar_buttons = document.querySelectorAll('.hide-slidebar-button');
+for (var i = 0; i < hide_slidebar_buttons.length; i++) {
+    hide_slidebar_buttons[i].addEventListener('click', function (e) {
+        if (slidebarHidden) {
+            animation_slidebar_expand.play();
+            animation_slidebar_panel_enter.play();
+            slidebarHidden = false;
+        }
+        else {
+            animation_slidebar_panel_exit.play();
+            animation_slidebar_shrink.play();
+            slidebarHidden = true;
+        }
+    });
+}
