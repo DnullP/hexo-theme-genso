@@ -1,8 +1,25 @@
-<div class="title-card-container">
-  <div class="title-card">
+<div class="recommend-card-container">
+  <div class="recommend-card-warp">
+    <div class="recommend-card">
+      <div class="recommend-card-content">
+        <% theme.recommend_card.article.forEach(element => { %>
 
+
+        <div class="recommend-card-content-article_item">
+          <a href=<%= element.url %>>
+            <%= element.article_title %>
+          </a>
+        </div>
+        <% }); %>
+      </div>
+      <img src=<%= theme.recommend_card.cover %>>
+
+    </div>
   </div>
-  <div class="title-card">
 
+  <div class="placard-warp">
+    <div class="placard">
+
+    </div>
   </div>
 </div>

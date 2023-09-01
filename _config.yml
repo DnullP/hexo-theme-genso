@@ -31,7 +31,6 @@ rawSource: _source
 # scripts loaded in the end of the body
 scripts:
   - /js/Genso.js
-  - /js/layout/page-cover.js
   - /js/layout/animation.js
   - /js/test.js
 # config which js file will be loaded in a particular page
@@ -44,3 +43,13 @@ fonts:
 
 color:
   card-title: "#000000"
+
+recommend_card:
+  title: Genso
+  cover: https://s2.loli.net/2023/07/23/u9dvATztknGecmI.jpg
+  article:
+    - article_title: 百度一下
+      url: www.baidu.com
+    - article_title: google一下
+      url: www.google.com
+
