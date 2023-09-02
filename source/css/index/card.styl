@@ -2,6 +2,8 @@
     width: 340px;
     height: 239px;
     flex-shrink: 0;
+
+    overflow: hidden;
 }
 
 .card-info-warp {
@@ -15,12 +17,9 @@
 }
 
 .card-info {
-    width: 96px;
-    height: 22px;
-    flex-shrink: 0;
     color: #754C4C;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -32,10 +31,17 @@
     flex-shrink: 0;
     color: #754C4C;
     font-family: Inter;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.card-title:hover {
+    color: #dd7abb;
 }
 
 .card-abstract {
@@ -43,9 +49,9 @@
     height: 142px;
     flex-shrink: 0;
     display: -webkit-box;
-    color: #754C4C;
+    color: #969696;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

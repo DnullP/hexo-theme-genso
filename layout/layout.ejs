@@ -24,96 +24,12 @@ pageTitle += ' [ ' + config.title + ' ]';
 </head>
 
 <body>
-  <div class="background">
-    <% var urls = config.imgURLs;
-      var randomIndex = Math.floor(Math.random() * urls.length);
-      var randomUrl = urls[randomIndex]; %>
+  <%-partial('layout/background')%>
 
-    <img src="<%= randomUrl %>" alt="">
-
-    <div class="title-text animate__animated animate__bounce">
-      <h1>This is
-        <span class="name">
-          <%=config.author%>
-        </span>
-      </h1>
-      <%=config.proverb%>
-
-    </div>
-  </div>
-
-  <div class="background-coverage">
-    <!--Typed text-->
-    <div class="background-coverage-text">
-      <span id="background-coverage-text">
-      </span>
-    </div>
-  </div>
-
-  <div class="navigator">
-    <div class="navi-buttom-container">
-      <% Object.keys(theme.menu).forEach(key => { %>
-      <% if (theme.menu[key] instanceof Object) { %>
-      <div class="navi-dropdown">
-        <div class="dropbtn">
-          <%=key%>
-        </div>
-        <div class="dropdown-content">
-          <% Object.keys(theme.menu[key]).forEach(element => { %>
-          <a href="<%=theme.menu[key][element]%>">
-            <%=element%>
-          </a>
-          <% }); %>
-        </div>
-      </div>
-    </div>
-    <% } else { %>
-    <a href="<%=theme.menu[key]%>" class="navi-buttom">
-      <div>
-        <%=key%>
-      </div>
-    </a>
-    <% } %>
-    <% }); %>
-  </div>
-
-  <div class="background-occupation">
-
-  </div>
-
-
+  <%-partial('layout/navigator')%>
 
   <div class="page-container">
-    <div class="slidebar-warp">
-      <div class="slidebar">
-        <div class="panel">
-
-          <div class="avatar">
-            <img src="/pic/avatar.jpg" alt="" style="width: 100%; height: 100%;">
-          </div>
-
-          <div class="info">
-
-
-          </div>
-
-          <div class="more-opt">
-
-          </div>
-
-        </div>
-
-        <div class="icon-warp">
-
-
-          <button class="hide-slidebar-button">
-
-          </button>
-
-
-        </div>
-      </div>
-    </div>
+    <%-partial("layout/slidebar") %>
 
     <div class="content">
       <%-body%>

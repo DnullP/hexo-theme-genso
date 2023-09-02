@@ -1,0 +1,26 @@
+<div class="navigator">
+  <div class="navi-buttom-container">
+    <% Object.keys(theme.menu).forEach(key => { %>
+    <% if (theme.menu[key] instanceof Object) { %>
+    <div class="navi-dropdown">
+      <div class="dropbtn">
+        <%=key%>
+      </div>
+      <div class="dropdown-content">
+        <% Object.keys(theme.menu[key]).forEach(element => { %>
+        <a href="<%=theme.menu[key][element]%>">
+          <%=element%>
+        </a>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+  <% } else { %>
+  <a href="<%=theme.menu[key]%>" class="navi-buttom">
+    <div>
+      <%=key%>
+    </div>
+  </a>
+  <% } %>
+  <% }); %>
+</div>
