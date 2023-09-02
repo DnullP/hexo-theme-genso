@@ -53,13 +53,14 @@
         <path d="M0 1L392 1.00003" stroke="#A5BFF2" />
       </svg>
     </div>
-    <a class="card-title" href="<%= url_for(post.path) %>" style="transform: translateX(45px);">
-      <%= post.title %>
-    </a>
-    <span class="card-abstract" style="transform: translateX(0);">
-      <%= post._content %>
-    </span>
-
+    <div style="transform: translateX(10px);">
+      <a class="card-title" href="<%= url_for(post.path) %>">
+        <%= post.title %>
+      </a>
+      <span class="card-abstract" style="transform: translateX(0px);">
+        <%= post._content %>
+      </span>
+    </div>
   </div>
 
   <%- partial("card-img-2", {randomUrl: randomUrl, patternId: patternId}) %>
