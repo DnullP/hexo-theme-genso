@@ -25,6 +25,8 @@ stylesheets:
   - /css/index/recommend-card-container.css
   - /css/index/card-container.css
   - /css/index/card.css
+  #post css
+  - /css/post/post.css
 
 #raw source
 rawSource: _source
@@ -32,11 +34,11 @@ rawSource: _source
 scripts:
   - /js/Genso.js
   - /js/layout/animation.js
-  - /js/test.js
+  - /js/layout/svg.js
 # config which js file will be loaded in a particular page
 layout_scripts:
-  - /js/layout/page-cover.js
   - /js/layout/animation.js
+  - /js/layout/svg.js
 
 fonts:
   - /font/jf-openhuninn-2.0.ttf
