@@ -5,14 +5,8 @@
   <%- partial("card-list-title") %>
 
   <% page.posts.sort('date', -1).limit(10).each(function(post, index) { %>
-  <% 
-        var urls = config.imgURLs;
-        var randomIndex = Math.floor(Math.random() * urls.length);
-        var randomUrl = urls[randomIndex];
-        var patternId = 'imagePattern' + index; 
-      %>
   
-  <%-partial('card', {post: post, randomUrl: randomUrl, patternId: patternId, index: index})%>
+  <%-partial('card', {post: post, index: index})%>
 
   <% }); %>
 </div>

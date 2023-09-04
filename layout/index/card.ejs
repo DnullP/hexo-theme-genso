@@ -1,7 +1,9 @@
 <% if (index%2 == 1) {%>
 <div class="card" style="justify-content: right;">
 
-  <%- partial("card-img-1", {randomUrl: randomUrl, patternId: patternId}) %>
+  <div class="card-img">
+    <div class="img-container"></div>
+  </div>
 
   <div class="card-content">
     <div class="card-info-warp">
@@ -63,7 +65,9 @@
     </div>
   </div>
 
-  <%- partial("card-img-2", {randomUrl: randomUrl, patternId: patternId}) %>
+  <div class="card-img">
+    <div class="img-container"></div>
+  </div>
 
 </div>
 

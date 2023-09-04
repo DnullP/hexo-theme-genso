@@ -137,6 +137,25 @@ var animation_slidebar_shrink = anime({
     easing: 'easeInOutSine',
 });
 
+//rotate the slideBarArrow
+
+var animation_slidebar_arrow_rotate_2 = anime({
+    targets: '#slideBarArrow',
+    rotate: ['180deg', '360deg'],
+    autoplay: false,
+    duration: animation_slidebar_panel_enter_config.duration,
+    easing: 'easeInOutSine',
+});
+
+var animation_slidebar_arrow_rotate_1 = anime({
+    targets: '#slideBarArrow',
+    rotate: ['0deg', '180deg'],
+    autoplay: false,
+    duration: animation_slidebar_panel_enter_config.duration,
+    easing: 'easeInOutSine',
+});
+
+
 var slidebarHidden = false;
 
 //find all .hide-slidebar-button and add the onclick event to activate the animation
@@ -146,12 +165,18 @@ for (var i = 0; i < hide_slidebar_buttons.length; i++) {
         if (slidebarHidden) {
             animation_slidebar_expand.play();
             animation_slidebar_panel_enter.play();
+            animation_slidebar_arrow_rotate_2.play();
+            
             slidebarHidden = false;
         }
         else {
             animation_slidebar_panel_exit.play();
             animation_slidebar_shrink.play();
+            animation_slidebar_arrow_rotate_1.play();
+            
+
             slidebarHidden = true;
         }
     });
 }
+
