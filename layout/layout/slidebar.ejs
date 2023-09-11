@@ -9,6 +9,38 @@
       <div class="info">
         <div class="subinfo-1">
           <div class="subinfo-1-left">
+            <div class="subinfo-1-left-info">
+              <div class="subinfo-1-left-info-inner">
+                <div class="subinfo-1-left-info-front">
+                  Post
+                </div>
+                <div class="subinfo-1-left-info-back random-color">
+                  <%- postCount(site) %>
+                </div>
+              </div>
+            </div>
+
+            <div class="subinfo-1-left-info">
+              <div class="subinfo-1-left-info-inner">
+                <div class="subinfo-1-left-info-front">
+                  Cate
+                </div>
+                <div class="subinfo-1-left-info-back random-color">
+                  <%- categoryCount(site) %>
+                </div>
+              </div>
+            </div>
+
+            <div class="subinfo-1-left-info">
+              <div class="subinfo-1-left-info-inner">
+                <div class="subinfo-1-left-info-front">
+                  Tag
+                </div>
+                <div class="subinfo-1-left-info-back random-color">
+                  <%- tagCount(site) %>
+                </div>
+              </div>
+            </div>
 
           </div>
 
@@ -19,12 +51,11 @@
 
         <div class="subinfo-2-wrap">
           <div class="subinfo-2">
-            
-            <div class="sociallink"></div>
-            <div class="sociallink"></div>
-            <div class="sociallink"></div>
-            <div class="sociallink"></div>
-            <div class="sociallink"></div>
+
+            <% Object.keys(theme.sociallink).forEach(function(key) { %>
+            <%- partial("sociallink", {name: key, link: theme.sociallink[key]}) %>
+            <% }); %>
+
           </div>
         </div>
       </div>
@@ -39,7 +70,7 @@
 
 
       <button class="hide-slidebar-button">
-          <img src="/svg/arrow-right-line.svg" id="slideBarArrow">
+        <img src="/svg/arrow-right-line.svg" id="slideBarArrow">
       </button>
 
 

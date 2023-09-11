@@ -27,19 +27,22 @@ stylesheets:
   - /css/index/card.css
   #post css
   - /css/post/post.css
+  #tool css
+  - /css/tool/color.css
 
 #raw source
 rawSource: _source
-# scripts loaded in the end of the body
+# all scripts
 scripts:
   - /js/Genso.js
   - /js/layout/animation.js
   - /js/layout/svg.js
+  - /js/csstool.js
 # config which js file will be loaded in a particular page
 layout_scripts:
   - /js/layout/animation.js
   - /js/layout/svg.js
-
+  - /js/csstool.js
 fonts:
   - /font/jf-openhuninn-2.0.ttf
 
@@ -55,3 +58,5 @@ recommend_card:
     - article_title: google一下
       url: www.google.com
 
+sociallink:
+  github: https://github.com/DnullP
