@@ -5,7 +5,7 @@ hexo.on("generateBefore", function (post) {
     var paths = hexo.theme.config.scripts
     var source = hexo.theme.config.rawSource
     var entry = paths.map(str => '../' + source + str);
-    var output = paths.map(str => './' + str.replace(/\.js$/, '.js'));
+    var output = paths.map(str => './' + str);
     var proceeding = []
     console.log(__dirname)
     entry.forEach((item, index) => {

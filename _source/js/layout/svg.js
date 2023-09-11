@@ -69,7 +69,7 @@ containerList.forEach(function (container, index) {
         anime({
             targets: image.node,
             width: 600,
-            duration: 500,
+            duration: 200,
             easing: 'easeInOutQuad'
         });
     });
@@ -78,7 +78,7 @@ containerList.forEach(function (container, index) {
         anime({
             targets: image.node,
             width: 550,
-            duration: 500,
+            duration: 200,
             easing: 'easeInOutQuad'
         });
     });
