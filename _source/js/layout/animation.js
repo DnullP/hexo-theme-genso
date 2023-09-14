@@ -33,11 +33,6 @@ var animation_coverage = anime({
     autoplay: false
 });
 
-window.addEventListener('scroll', function (e) {
-    var ratio = window.scrollY / window.innerHeight;
-    animation_coverage.seek(animation_coverage.duration * ratio);
-});
-
 // Move out the title when scrolling
 var animation_tilte_type = anime({
     targets: ['.background-coverage-text', '.title-text'],
@@ -49,10 +44,14 @@ var animation_tilte_type = anime({
     autoplay: false
 });
 
-window.addEventListener('scroll', function (e) {
+var handleScroll = function (e) {
     var ratio = window.scrollY / window.innerHeight;
     animation_tilte_type.seek(animation_tilte_type.duration * ratio * 2);
-});
+    animation_coverage.seek(animation_coverage.duration * ratio);
+}
+
+window.addEventListener('scroll', handleScroll);
+document.addEventListener('DOMContentLoaded', handleScroll);
 
 // Move out the navigator when Y is greater than window.innerHeight
 // resume it when user scrolling up

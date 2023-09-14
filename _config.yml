@@ -27,6 +27,7 @@ stylesheets:
   - /css/index/card.css
   #post css
   - /css/post/post.css
+  - /css/post/idea.css
   #tool css
   - /css/tool/color.css
 
@@ -60,3 +61,8 @@ recommend_card:
 
 sociallink:
   github: https://github.com/DnullP
+
+placard:
+  - 这里是公告栏
+  - 有什么东西可以写在这里
+  - 然后展示一句很长很长很长很长很长很长很长很长很长很长很长很长很长很长的话
