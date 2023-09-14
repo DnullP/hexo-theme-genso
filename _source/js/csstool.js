@@ -5,7 +5,6 @@ function getRandomInt(min, max) {
 }
 
 function getAlphaFromRGBA(rgbaString) {
-    // 解析rgba字符串并返回透明度 (alpha) 值
     const match = rgbaString.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(\.\d+)?))?\)/);
     return (match && match[4]) ? parseFloat(match[4]) : 1;
 }

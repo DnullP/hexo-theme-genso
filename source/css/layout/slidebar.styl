@@ -87,9 +87,8 @@
     height: 40px;
     display: flex;
     justify-content: center;
-    background-color: #ffffffba;
-
     backface-visibility: hidden;
+    background-color: rgb(255, 255, 255);
     align-items: center;
     flex-shrink: 0;
     transform: rotateY(180deg);
@@ -112,6 +111,54 @@
     height: 52px;
     flex-shrink: 0;
     background: #ffffff77;
+}
+
+.subinfo-1-right-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    background: #ffffff00;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.subinfo-1-right-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-shrink: 0;
+    background: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // text center
+    text-align: center;
+    font-family: Inter;
+    backface-visibility: hidden;
+    flex-shrink: 0;
+}
+
+.subinfo-1-right-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-shrink: 0;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: Inter;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.subinfo-1-right:hover .subinfo-1-right-inner {
+    transform: rotateY(180deg);
 }
 
 .subinfo-2-wrap {
@@ -137,19 +184,18 @@
     width: 30px;
     height: 30px;
     flex-shrink: 0;
-
     object-fit: cover;
 }
 
 .sociallink a {
-  display: block;
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .sociallink img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .more-opt {

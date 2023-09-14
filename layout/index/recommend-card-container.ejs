@@ -19,7 +19,11 @@
 
   <div class="placard-warp">
     <div class="placard">
-
+        <% theme.placard.forEach(element => { %>
+          <div class="placard-text">
+            <%= element %>
+          </div>
+        <% }); %>
     </div>
   </div>
 </div>
