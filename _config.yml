@@ -27,6 +27,7 @@ stylesheets:
   - /css/index/card.css
   #post css
   - /css/post/post.css
+  - /css/post/idea.css
   #tool css
   - /css/tool/color.css
 
