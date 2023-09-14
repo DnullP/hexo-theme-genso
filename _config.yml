@@ -39,11 +39,14 @@ scripts:
   - /js/layout/animation.js
   - /js/layout/svg.js
   - /js/csstool.js
+  - /js/post/mermaid.js
 # config which js file will be loaded in a particular page
 layout_scripts:
   - /js/layout/animation.js
   - /js/layout/svg.js
   - /js/csstool.js
+post_scripts:
+  - /js/post/mermaid.js
 fonts:
   - /font/jf-openhuninn-2.0.ttf
 

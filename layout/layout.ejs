@@ -42,7 +42,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 
 
 
-  <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <% if (theme.layout_scripts !== undefined && theme.layout_scripts.length > 0) { %>
   <!-- scripts list from theme config.yml -->
   <% theme.layout_scripts.forEach(url => { %>
   <script src="<%=url%>"></script>
